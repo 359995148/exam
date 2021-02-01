@@ -1,0 +1,9 @@
+# 生产环境的配置，采用git方式
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: gitUrl             # 配置git仓库的地址
+          username: gitUserName   # git仓库的账号
+          password: gitPassword   # git仓库的密码
