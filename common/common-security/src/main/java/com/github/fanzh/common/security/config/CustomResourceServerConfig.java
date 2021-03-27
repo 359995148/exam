@@ -67,13 +67,17 @@ public class CustomResourceServerConfig extends ResourceServerConfigurerAdapter 
     @Override
     public void configure(HttpSecurity http) throws Exception {
         String[] ignores = new String[filterIgnoreProperties.getUrls().size()];
-        http
+        http    // 跨站请求伪造
                 .csrf().disable()
                 .httpBasic().disable()
                 .authorizeRequests()
+                // 跳过认证的url地址
                 .antMatchers(filterIgnoreProperties.getUrls().toArray(ignores)).permitAll()
+                // 拦截所有的请求, 必须认证
                 .anyRequest().authenticated()
-                .and().exceptionHandling().accessDeniedHandler(new OAuth2AccessDeniedHandler());
+                // 异常处理 返回的信息
+                .and().exceptionHandling().accessDeniedHandler(new OAuth2AccessDeniedHandler())
+        ;
         // 手机号登录
         http.apply(mobileSecurityConfigurer);
         // 微信登录

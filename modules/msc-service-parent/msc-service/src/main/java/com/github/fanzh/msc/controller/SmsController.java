@@ -37,7 +37,7 @@ public class SmsController {
      * @author fanzh
      * @date 2019/06/22 13:12
      */
-    @ApiOperation(value = "获取课程列表")
+    @ApiOperation(value = "发送短信")
     @PostMapping("sendSms")
     public ExecResult<SmsResponse> sendSms(@RequestBody SmsDto smsDto) {
         log.info("Send message to {}, content: {}", smsDto.getReceiver(), smsDto.getContent());

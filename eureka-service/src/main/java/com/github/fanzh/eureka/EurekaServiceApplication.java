@@ -1,4 +1,4 @@
-package com.tighub.fanzh.eureka;
+package com.github.fanzh.eureka;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

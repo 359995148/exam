@@ -1230,7 +1230,7 @@ CREATE TABLE `sys_tenant`  (
 -- ----------------------------
 -- Records of sys_tenant
 -- ----------------------------
-INSERT INTO `sys_tenant` VALUES (581236567985754112, 'github', '码云', '码云', 1, 'admin', '2019-05-23 21:46:36', 'admin', '2019-05-23 21:46:36', 0, 'github', 'EXAM');
+INSERT INTO `sys_tenant` VALUES (581236567985754112, 'github', 'github', 'github', 1, 'admin', '2019-05-23 21:46:36', 'admin', '2019-05-23 21:46:36', 0, 'github', 'EXAM');
 
 -- ----------------------------
 -- Table structure for sys_user
